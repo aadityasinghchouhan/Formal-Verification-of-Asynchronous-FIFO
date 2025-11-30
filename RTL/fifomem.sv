@@ -29,7 +29,7 @@ module fifomem #(parameter DATA_WIDTH=8, ADDR_WIDTH=4) (output logic [DATA_WIDTH
 
     always_ff@(posedge rclk)
     begin
-        if(rclken && !rempty)
+        if(rclken && !rempty && rrst_n)
         begin
             rdata <= fifo[raddr];
         end
