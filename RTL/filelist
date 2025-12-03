@@ -1,0 +1,9 @@
+../RTL/asynch_fifo_dut.sv
+../RTL/fifo_mem.sv
+../RTL/rptr_empty.sv
+../RTL/sync_r2w.sv
+../RTL/sync_w2r.sv
+../RTL/wptr_full.sv
+../FPV/async_fifo_assertion.sv
+../FPV/async_fifo_assumption.sv
+../FPV/async_fifo_cover.sv

@@ -1,7 +1,7 @@
-set_fml_appmode FPV 
-set design async_fifo_dut 
+set_fml_appmode COV
 
-read_file -top $design -format sverilog -sva -aep all -vcs {-f ../RTL/filelist}
+set design async_fifo_dut
+read_file -top $design -format sverilog -sva -vcs {-f ../RTL/filelist} -cov all
 
 # Creating clock and reset signals
 create_clock clk -period 100 -initial 0 
@@ -11,5 +11,7 @@ create_reset rst_b -sense low
 sim_run -stable 
 sim_save_reset
 
-check_fv
-report_fv
+check_fv_setup
+
+#check_fv
+#report_fv
